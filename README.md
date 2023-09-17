@@ -95,10 +95,11 @@ kubectl get nodes
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_instance-ami"></a> [instance-ami](#input\_instance-ami) | n/a | `string` | `"ami-04cb4ca688797756f"` | no |
-| <a name="input_instance-type"></a> [instance-type](#input\_instance-type) | n/a | `string` | `"t3a.medium"` | no |
-| <a name="input_key"></a> [key](#input\_key) | n/a | `string` | `"name-key"` | no |
-| <a name="input_name-cluster"></a> [name-cluster](#input\_name-cluster) | n/a | `string` | `"name-cluster"` | no |
+| <a name="input_instance-ami"></a> [instance-ami](#input\_instance-ami) | n/a | `string` | `"ami-04cb4ca688797756f"` | yes |
+| <a name="input_instance-type"></a> [instance-type](#input\_instance-type) | n/a | `string` | `"t3a.medium"` | yes |
+| <a name="input_key"></a> [key](#input\_key) | n/a | `string` | `"name-key"` | yes |
+| <a name="input_name-cluster"></a> [name-cluster](#input\_name-cluster) | n/a | `string` | `"name-cluster"` | yes |
+| <a name="input_name-sg"></a> [name-sg](#input\_name-sg) | n/a | `string` | `"name-sg"` | yes |
 
 ## Outputs
 
