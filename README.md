@@ -16,7 +16,7 @@ git clone https://github.com/deividduarte20/terraform-eks.git
 cd terraform-eks
 ```
 
-<img src=img/warning.png width=25 height=25 /> Altere os valores das variáveis da pasta raiz no arquivo variables.tf.
+<img src=img/warning2.png width=25 height=25 /> Altere os valores das variáveis da pasta raiz no arquivo variables.tf.
 
 #### Inicie o terraform
 
