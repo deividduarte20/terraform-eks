@@ -19,7 +19,7 @@ resource "aws_eks_node_group" "node-grp" {
   subnet_ids      = [aws_subnet.public-1.id, aws_subnet.public-2.id]
   capacity_type   = "ON_DEMAND"
   disk_size       = "20"
-  instance_types  = ["t3a.medium"]
+  instance_types  = [var.instance-type]
 
   remote_access {
     ec2_ssh_key               = var.key

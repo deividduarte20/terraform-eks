@@ -1,3 +1,3 @@
 output "cluster-arn" {
-  value = aws_eks_cluster.eks.arn
+  value = module.eks.cluster-arn
 }
