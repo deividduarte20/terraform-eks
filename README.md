@@ -2,10 +2,9 @@
 
 ### Objetivo
 
-#### Consiste em provisionar AWS EKS
+#### Consiste em provisionar AWS EKS e deployment, service e hpa utilizando o provider helm
 
 #### Baixe o repositório
-
 ```bash
 git clone https://github.com/deividduarte20/terraform-eks.git
 ```
@@ -30,14 +29,7 @@ terraform init
 terraform apply
 ```
 
-#### Habilite a conexão com o EKS (Insira o nome do seu cluster)
-
-```bash
-aws eks --region us-east-1 update-kubeconfig --name nome-cluster
-```
-
 #### Verifique os nodes
-
 ```bash
 kubectl get nodes
 ```
