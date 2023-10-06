@@ -92,6 +92,7 @@ kubectl get nodes
 | <a name="input_key"></a> [key](#input\_key) | n/a | `string` | `"name-key"` | yes |
 | <a name="input_name-cluster"></a> [name-cluster](#input\_name-cluster) | n/a | `string` | `"name-cluster"` | yes |
 | <a name="input_name-sg"></a> [name-sg](#input\_name-sg) | n/a | `string` | `"name-sg"` | yes |
+| <a name="input_cluster-version"></a> [cluster-version](#input\_cluster-version) | n/a | `string` | `"cluster-version"` | yes |
 
 ## Outputs
 
