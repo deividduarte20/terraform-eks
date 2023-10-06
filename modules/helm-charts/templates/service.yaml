@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}
+  # namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Release.Name }}
+spec:
+  {{- if ( "Service" )}} # lookup "v1" "ingress-nginx" "ingress-nginx-controller"
+  type: ClusterIP
+  {{- else }}
+  type: {{ .Values.service.type }}
+  {{- end }}
+  ports:
+  {{- range .Values.service.ports }}
+  - name: {{ .name }}
+    targetPort: {{ .targetPort }}
+    port: {{ .port }}
+  {{- end }}
+  selector:
+    app: {{ .Release.Name }}
