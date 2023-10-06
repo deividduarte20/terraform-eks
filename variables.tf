@@ -17,3 +17,7 @@ variable "instance-ami" {
 variable "name-sg" {
   default = "allow_tls"
 }
+
+variable "cluster-version" {
+  default = "1.28"
+}

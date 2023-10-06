@@ -17,3 +17,7 @@ variable "instance-ami" {
 variable "name-sg" {
 
 }
+
+variable "cluster-version" {
+
+}
