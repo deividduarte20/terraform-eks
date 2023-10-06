@@ -2,7 +2,7 @@
 
 ### Objetivo
 
-#### Consiste em provisionar AWS EKS e deployment, service e hpa utilizando o provider helm.
+#### Consiste em provisionar AWS EKS, deployment, service e hpa utilizando o provider helm no terraform.
 
 #### Baixe o repositório
 ```bash
