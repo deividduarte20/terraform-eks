@@ -2,7 +2,7 @@
 
 ### Objetivo
 
-#### Consiste em provisionar AWS EKS e deployment, service e hpa utilizando o provider helm
+#### Consiste em provisionar AWS EKS e deployment, service e hpa utilizando o provider helm.
 
 #### Baixe o repositório
 ```bash
