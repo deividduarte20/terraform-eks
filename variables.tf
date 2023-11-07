@@ -21,3 +21,7 @@ variable "name-sg" {
 variable "cluster-version" {
   default = "1.28"
 }
+
+variable "region" {
+  default = "us-east-1"
+}
