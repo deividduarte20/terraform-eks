@@ -50,7 +50,7 @@ kubectl get nodes
 
 | EKS  | Version  |
 |------|---------|
-| eks  |  1.27   |
+| eks  |  1.28   |
 
 
 ## Resources
