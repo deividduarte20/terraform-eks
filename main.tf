@@ -6,11 +6,13 @@ module "eks" {
   name-sg         = var.name-sg
   key             = var.key
   cluster-version = var.cluster-version
+  region          = var.region
 }
 
 resource "helm_release" "my-release" {
   name  = "my-app"              # Nome do release Helm
   chart = "modules/helm-charts" # Diretório dentro do repositório contendo o chart Helm
 
-  namespace = "default" # Namespace do Kubernetes onde o recurso será implantado
+  namespace  = "default" # Namespace do Kubernetes onde o recurso será implantado
+  depends_on = [null_resource.update_kubeconfig]
 }

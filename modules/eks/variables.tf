@@ -21,3 +21,7 @@ variable "name-sg" {
 variable "cluster-version" {
 
 }
+
+variable "region" {
+
+}
