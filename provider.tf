@@ -11,7 +11,9 @@ provider "helm" {
 
 resource "null_resource" "update_kubeconfig" {
   provisioner "local-exec" {
-    command = "aws eks --region us-east-1 update-kubeconfig --name ${var.name-cluster}"
+    command = <<-EOT
+      aws eks --region us-east-1 update-kubeconfig --name ${var.name-cluster}
+    EOT
   }
   depends_on = [module.eks]
   triggers = {
