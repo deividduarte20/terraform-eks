@@ -6,10 +6,6 @@ variable "instance-type" {
 
 }
 
-variable "key" {
-
-}
-
 variable "instance-ami" {
 
 }

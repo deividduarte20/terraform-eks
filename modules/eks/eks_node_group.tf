@@ -1,6 +1,5 @@
 resource "aws_instance" "kubectl-server" {
   ami                         = var.instance-ami
-  key_name                    = var.key
   instance_type               = var.instance-type
   associate_public_ip_address = true
   subnet_id                   = aws_subnet.public-1.id
@@ -21,16 +20,11 @@ resource "aws_eks_node_group" "node-grp" {
   disk_size       = "20"
   instance_types  = [var.instance-type]
 
-  remote_access {
-    ec2_ssh_key               = var.key
-    source_security_group_ids = [aws_security_group.allow_tls.id]
-  }
-
   labels = tomap({ env = "dev" })
 
   scaling_config {
     desired_size = 2
-    max_size     = 3
+    max_size     = 2
     min_size     = 1
   }
 
@@ -41,8 +35,6 @@ resource "aws_eks_node_group" "node-grp" {
   depends_on = [
     aws_iam_role_policy_attachment.AmazonEKSWorkerNodePolicy,
     aws_iam_role_policy_attachment.AmazonEKS_CNI_Policy,
-    aws_iam_role_policy_attachment.AmazonEC2ContainerRegistryReadOnly,
-    #aws_subnet.pub_sub1,
-    #aws_subnet.pub_sub2,
+    aws_iam_role_policy_attachment.AmazonEC2ContainerRegistryReadOnly
   ]
 }
