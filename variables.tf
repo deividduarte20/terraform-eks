@@ -6,10 +6,6 @@ variable "instance-type" {
   default = "t3a.medium"
 }
 
-variable "key" {
-  default = "deividdua"
-}
-
 variable "instance-ami" {
   default = "ami-04cb4ca688797756f"
 }
@@ -19,9 +15,13 @@ variable "name-sg" {
 }
 
 variable "cluster-version" {
-  default = "1.28"
+  default = "1.29"
 }
 
 variable "region" {
   default = "us-east-1"
 }
+
+# variable "create_kubeconfig" {
+#   default = true
+# }

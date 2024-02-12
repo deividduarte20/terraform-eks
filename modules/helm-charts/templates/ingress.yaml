@@ -1,0 +1,19 @@
+# ingress-new-comments/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: {{ .Values.ingress.host }}
+    http:
+      paths:
+      - pathType: "Prefix"
+        path: "/"
+        backend:
+          service:
+            name: {{ .Values.ingress.backend.serviceName }}
+            port:
+              number: {{ .Values.ingress.backend.servicePort }}
